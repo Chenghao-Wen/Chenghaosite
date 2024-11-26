@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="https://github.com/Chenghao-Wen/Chenghaosite/blob/main/static/Hometown.jpg" title="Chenghao's Hometown" width="450" height="200">}}
+![Chenghao's hometown](/images/Hometown.jpg)
 
 This is Chenghao Wen, a young individual constantly exploring his interests. He was born in Shicheng County, Jiangxi Province, a small town filled with the fragrance of lotus flowers. In 2020, he traveled across the country to attend Southeast University in Nanjing as an Honors Class member, where he completed his Bachelor's degree in Information Engineering.
 
