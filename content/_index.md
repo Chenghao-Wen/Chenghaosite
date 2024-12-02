@@ -3,7 +3,7 @@ title: Home
 ---
 
 <figure style="text-align: center; margin: 0; padding: 0;">     
-    <img src="\images\Hometown.png" alt="Chenghao's Hometown" style=" width: 600px; height: 300px;"/>     
+    <img src="/images/Hometown.png" alt="Chenghao's Hometown" style=" width: 600px; height: 300px;"/>     
     <figcaption style="margin-top: 5px; font-size: 14px; line-height: 1.2;">Chenghao's Hometown</figcaption> 
 </figure>
 
