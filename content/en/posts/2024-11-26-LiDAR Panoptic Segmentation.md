@@ -46,12 +46,14 @@ Semantic segmentation labels for points denote the semantic categories of 'Thing
 </figure>
 
 
+
 In comparison, instance segmentation labels are only valid for dynamic 'Thing' points, indicating both the categories of 'Thing' and assigning unique identifiers to different objects, such as Car A, Car B, and Bike C, which might be labeled as one, two, and three, respectively. Therefore, instance segmentation, initially regarded as a downstream task of object recognition, focuses on locating different 'Thing', or their centers.
 
 <figure style="text-align: center; margin: 0; padding: 0;">
     <img src="\images\Instance.png" alt="LiDAR Instance Segmentation" style=" width: 500px; height: 300px;"/>
     <figcaption style="margin-top: 5px;">LiDAR Instance Segmentation</figcaption>
 </figure>
+
 
 Panoptic segmentation can be viewed as a multi-task learning approach combining instance and semantic segmentation, capable of perceiving the roadway and distinguishing vehicles with varying speeds. Utilizing a unified feature extraction network to accomplish both tasks in a single inference ensures real-time processing, which is the significance of panoptic segmentation.
 ## What Is the Problem Remained to be Solved
