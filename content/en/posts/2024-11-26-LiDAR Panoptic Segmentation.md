@@ -40,19 +40,18 @@ Perception tasks in autonomous driving scenes encompass semantic segmentation an
 
 Semantic segmentation labels for points denote the semantic categories of 'Thing' and 'Stuff' points, with common categories on road including vehicles, pedestrians, vegetation, traffic lights. This implies that completing this task merely requires identifying the boundaries of each category. 
 
-
 <figure style="text-align: center; margin: 0; padding: 0;">
-    <img src="\images\semantic.png" alt="LiDAR Semantic Segmentation" style="transform: rotate(270deg); width: 300px; height: 600px;"/>
+    <img src="\images\Semantic.png" alt="LiDAR Semantic Segmentation" style="width: 500px; height: 300px;"/>
     <figcaption style="margin-top: 5px; font-size: 14px; line-height: 1.2;">LiDAR Semantic Segmentation</figcaption>
 </figure>
+
 
 In comparison, instance segmentation labels are only valid for dynamic 'Thing' points, indicating both the categories of 'Thing' and assigning unique identifiers to different objects, such as Car A, Car B, and Bike C, which might be labeled as one, two, and three, respectively. Therefore, instance segmentation, initially regarded as a downstream task of object recognition, focuses on locating different 'Thing', or their centers.
 
 <figure style="text-align: center; margin: 0; padding: 0;">
-    <img src="\images\instance.png" alt="LiDAR Instance Segmentation" style="transform: rotate(270deg); width: 300px; height: 600px;"/>
+    <img src="\images\Instance.png" alt="LiDAR Instance Segmentation" style=" width: 500px; height: 300px;"/>
     <figcaption style="margin-top: 5px;">LiDAR Instance Segmentation</figcaption>
 </figure>
-
 
 Panoptic segmentation can be viewed as a multi-task learning approach combining instance and semantic segmentation, capable of perceiving the roadway and distinguishing vehicles with varying speeds. Utilizing a unified feature extraction network to accomplish both tasks in a single inference ensures real-time processing, which is the significance of panoptic segmentation.
 ## What Is the Problem Remained to be Solved
