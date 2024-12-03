@@ -41,9 +41,10 @@ Perception tasks in autonomous driving scenes encompass semantic segmentation an
 Semantic segmentation labels for points denote the semantic categories of 'Thing' and 'Stuff' points, with common categories on road including vehicles, pedestrians, vegetation, traffic lights. This implies that completing this task merely requires identifying the boundaries of each category. 
 
 <figure style="text-align: center;">
-    <img src="\images\Semantic2.png" alt="LiDAR Semantic Segmentation">
+    <img src="\images\Semantic3.png" alt="LiDAR Semantic Segmentation">
     <figcaption>LiDAR Semantic Segmentation</figcaption>
 </figure>
+
 
 
 
@@ -53,9 +54,10 @@ Semantic segmentation labels for points denote the semantic categories of 'Thing
 In comparison, instance segmentation labels are only valid for dynamic 'Thing' points, indicating both the categories of 'Thing' and assigning unique identifiers to different objects, such as Car A, Car B, and Bike C, which might be labeled as one, two, and three, respectively. Therefore, instance segmentation, initially regarded as a downstream task of object recognition, focuses on locating different 'Things', or their centers.
 
 <figure style="text-align: center;">
-    <img src="\images\Instance2.png" alt="LiDAR Instance Segmentation">
+    <img src="\images\Instance3.png" alt="LiDAR Instance Segmentation">
     <figcaption>LiDAR Instance Segmentation</figcaption>
 </figure>
+
 
 
 
