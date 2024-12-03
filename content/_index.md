@@ -1,7 +1,6 @@
 ---
 title: Home\
-![Chenghao's Hometown](/images/Hometown.jpg)
-**Chenghao's Hometown**
+![Chenghao's Hometown](\images\Hometown.jpg)
 
 ---
 
