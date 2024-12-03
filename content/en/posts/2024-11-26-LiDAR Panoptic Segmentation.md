@@ -41,9 +41,10 @@ Perception tasks in autonomous driving scenes encompass semantic segmentation an
 Semantic segmentation labels for points denote the semantic categories of 'Thing' and 'Stuff' points, with common categories on road including vehicles, pedestrians, vegetation, traffic lights. This implies that completing this task merely requires identifying the boundaries of each category. 
 
 <figure style="text-align: center; margin: 0; padding: 0;">
-    <img src="/images/Semantic.png" alt="LiDAR Semantic Segmentation" style="width: 500px; height: 300px;"/>
+    <img src="/images/Bus.png" alt="LiDAR Semantic Segmentation" style="width: 500px; height: 300px;"/>
     <figcaption style="margin-top: 5px; font-size: 14px; line-height: 1.2;">LiDAR Semantic Segmentation</figcaption>
 </figure>
+
 
 
 
