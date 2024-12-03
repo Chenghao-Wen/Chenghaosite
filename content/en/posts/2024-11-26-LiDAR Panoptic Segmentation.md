@@ -16,11 +16,6 @@ tags:
 
 
 
-<style>   
-    figure {     text-align: center;    margin: 0;  }    
-    img {     display: inline-block;     max-width: 100%;   }    
-    figcaption {     font-size: 14px;     color: #555;     margin-top: 10px; }
-</style>
 
 # LiDAR Panoptic Segmentation
 
