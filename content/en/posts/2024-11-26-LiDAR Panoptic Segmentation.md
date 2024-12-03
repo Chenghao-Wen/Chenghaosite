@@ -1,14 +1,21 @@
 ---
 title: "LiDAR Panoptic Segmentation"
-date: 2024-11-24T20:42:27-05:00
-author: Chenghao
-slug: first-post-cn
+date: 2024-12-03 T18:37:57-08:00
+author: Chenghao Wen
+slug: second-post
 draft: false
 toc: true
 categories:
   - test
-tags: article
+tags:
+  - article
+  - English
 ---
+
+
+
+
+
 <style>   
     figure {     text-align: center;    margin: 0;  }    
     img {     display: inline-block;     max-width: 100%;   }    
@@ -57,7 +64,6 @@ In comparison, instance segmentation labels are only valid for dynamic 'Thing' p
     <img src="\images\Instance3.png" alt="LiDAR Instance Segmentation">
     <figcaption>LiDAR Instance Segmentation</figcaption>
 </figure>
-
 
 
 
