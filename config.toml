@@ -1,6 +1,6 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
-title = "Hugo-HT"
+title = "Chenghao Wen"
 theme = "hugo-ht"
 footnotereturnlinkcontents = "↩"
 enableRobotsTXT = true
@@ -21,7 +21,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     weight = 2
 [[menu.en]]
     name = "Personal Statement"
-    url = "/en/research/"
+    url = "/en/ps/"
     weight = 3
 [[menu.en]]
     name = "Posts"
