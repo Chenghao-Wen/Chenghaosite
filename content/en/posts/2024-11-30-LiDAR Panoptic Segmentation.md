@@ -1,6 +1,6 @@
 ---
 title: "LiDAR Panoptic Segmentation"
-date: 2024-11-26T18:37:57-08:00
+date: 2024-11-30T18:37:57-08:00
 author: Chenghao Wen
 slug: second-post
 draft: false
@@ -66,7 +66,7 @@ Perception tasks in autonomous driving scenes encompass semantic segmentation an
 
 **Panoptic segmentation** can be viewed as a multi-task learning approach combining instance and semantic segmentation, capable of perceiving the roadway and distinguishing vehicles with varying speeds. Utilizing a unified feature extraction network to accomplish both tasks in a single inference ensures real-time processing, which is the significance of panoptic segmentation.
 
-## What Is the Problem Remaining to be Solve(Coming)
+## What Is the Problem Remaining to be Solve(Coming Soon)
 
-## Our Proposed Method(Coming)
+## Our Proposed Method(Coming Soon)
 
