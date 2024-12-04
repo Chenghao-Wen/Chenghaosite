@@ -1,8 +1,8 @@
 ---
-title: "LiDAR Panoptic Segmentation"
-date: 2024-11-26T18:37:57-08:00
+title: "Fine-tune SAM"
+date: 2024-12-1T13:40:23-08:00
 author: Chenghao Wen
-slug: second-post
+slug: first-post
 draft: false
 toc: true
 categories:
