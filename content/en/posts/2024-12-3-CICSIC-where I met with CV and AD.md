@@ -1,6 +1,6 @@
 ---
 title: "CICSIC-Where I fall in love with AD and CV"
-date: 2024-12-3T14:30:37-08:00
+date: 2024-12-03T14:30:37-08:00
 author: Chenghao Wen
 slug: first-post
 draft: false
