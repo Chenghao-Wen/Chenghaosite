@@ -12,7 +12,7 @@ tags:
   - English
 ---
 
-During my second year of university, I dedicated all my spare time to an entrepreneurship competition. The project I worked on was a distributed drive chassis motion controller for electric vehicles, led by Dr. Y from the Department of Vehicle Engineering (who was still a candidate at the time).
+During my second year of university, I dedicated all my spare time to an entrepreneurship competition-CICSIC. The project I worked on was a distributed drive chassis motion controller for electric vehicles, led by Dr. Y from the Department of Vehicle Engineering (who was still a candidate at the time).
 
 Although I frequently doubted my abilities and even considered dropping the project, I persevered. Through the process of market analysis and real-world vehicle testing, I developed a deep interest in autonomous driving and computer vision. The timeline for this project was from **October 2021 to September 2022**.
 
@@ -34,12 +34,12 @@ During the first presentation, I was harshly criticized by Dr. Y and another mas
 </figure>
 
 
-This experience was more like training **Generative Adversarial Network**—I constantly deepened my understanding of the electric vehicle chassis controller market and presented more convincing business plans, while the 'discriminators'—from PhD students to judges to investors—continued to raise their expectations. I have learned how to receive criticism and be humble about unfamiliar field.
+This experience was more like training **Generative Adversarial Network**—I constantly deepened my understanding of the electric vehicle chassis controller market and presented more convincing business plans, while the 'discriminators'—from PhD students to judges to investors—continued to raise their expectations. I have learned how to receive criticism and be humble about unfamiliar field. 
 
 
 ## Learned time management and developed a passion for AD and CV
 
-Southeast University and the School of Mechanical Engineering placed great emphasis on our project, as the competition involved not only inter-school rivalry but also inter-departmental competition. The pressure we faced was immense, especially for me to start from zero as a second-year undergraduate. Although I started off at a disadvantage, I have a personal trait: **I don't like to give up**. Perhaps my initial efforts were subpar, but I always maintained a positive outlook on the outcome, which made me resilient in the face of setbacks.
+Southeast University and the School of Mechanical Engineering placed great emphasis on our project, as the competition involved not only inter-school rivalry but also inter-departmental competition. The pressure we faced was immense, especially for me to start from zero as a second-year undergraduate. Although I started off at a disadvantage, I have a personal trait: perhaps my initial efforts were subpar, but I always maintained a positive outlook on the outcome, which made me resilient in the face of setbacks.
 
 <figure style="text-align: center;">
     <img src="\psimages\Sensorcaliboration.jpg" alt="Working on sensor caliboration" style="width: 400px; height: 300px;">
