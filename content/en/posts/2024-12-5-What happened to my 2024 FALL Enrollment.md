@@ -18,7 +18,7 @@ After confirming my application to McMaster University, I rejected several other
 
 **Sadly, till now-6 months later, the background check has not been finished**. I have tried all possible measures, including calling IRCC, web forming IRCC, ATIP Request, and even leaving mandamus in Canada Federal Court about the unreasonable delay for my application, but none of these measures worked out.
 
-I have applied for a deferral on my offer to 2025 Spring in August. However, **enrollment in 2025 Spring still seems impossible for me at this point(12.5/2024)**. I know this could be a political factor that I could not control, and I am carrying out some research under the supervision of my undergraduate supervisor. However, I still feel frustrated about the deferral of my graduate program.  I contacted two other Meng offer holders from China in the ECE department, and they both faced with same problem and applied for deferral. **One of them has got his study permit on time, and the other has not**.
+I have applied for a deferral on my offer to 2025 Spring in August. However, **enrollment in 2025 Spring still seems impossible for me at this point(12.5/2024)**. I know this could be a political factor that I could not control, and I am carrying out some research under the supervision of my undergraduate supervisor. However, I still feel frustrated about the deferral of my graduate program.  I contacted two other Meng offer holders from China in the ECE department, and they both faced with same problem and applied for deferral. **One of them got his study permit in Oct, and the other has not yet**.
 
 Hence, I have decided to resubmit my application for 2025 FALL and seek a RA position for the coming months.
 
