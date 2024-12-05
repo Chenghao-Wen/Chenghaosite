@@ -20,7 +20,7 @@ After confirming my application to McMaster University, I rejected several other
 
 
 <figure style="text-align: center;">
-    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 500px; height: 3500px;">
+    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 500px; height: 350px;">
     <figcaption>My study permit application tracker history</figcaption>
 </figure>
 
