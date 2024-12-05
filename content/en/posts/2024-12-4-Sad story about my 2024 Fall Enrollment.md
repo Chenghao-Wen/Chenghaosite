@@ -1,5 +1,5 @@
 ---
-title: "Exchange experience in these two UCs was amazing(Coming)"
+title: "2024 FALL got deferred due to VISA delay"
 date: 2024-12-04T19:33:01-08:00
 author: Chenghao Wen
 slug: first-post
@@ -12,7 +12,7 @@ tags:
   - English
 ---
 
-In 2023 FALL, when I was still an exchange student at the University of California, Santa Barbara, I submitted my application for 2024 FALL for several **research-based Master's programs in Canada**. Because the tuition for a research-based student in Canada is relatively low, and many of the programs would provide scholarships for students. I was successfully admitted to McMaster University to pursue a MASc(Master of Applied Science) degree with a respectable supervisor.
+In 2023, when I was still an exchange student at the University of California, Santa Barbara, I submitted my application for 2024 FALL for several **research-based Master's programs in Canada**. Because the tuition for a research-based student in Canada is relatively low, and many of the programs would provide scholarships for students. I was successfully admitted to McMaster University to pursue a MASc(Master of Applied Science) degree with a respectable supervisor.
 
 After confirming my application to McMaster University, I rejected several other offers and started to prepare for my application for a Canada Study permit. **My submission to the study permit was done back in April.** The process consists of several steps: Eligibility Check, Background Check, Medical Exam, Biometrics Collection. I finished the Medical Exam and Biometrics Collection in May, and my eligibility check was passed on June 18. And my background check started.
 
@@ -20,7 +20,7 @@ After confirming my application to McMaster University, I rejected several other
 
 
 <figure style="text-align: center;">
-    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 400px; height: 300px;">
+    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 500px; height: 300px;">
     <figcaption>My study permit application tracker history</figcaption>
 </figure>
 
