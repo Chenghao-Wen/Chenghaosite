@@ -31,7 +31,7 @@ The most challenging phase was at the beginning of the project. I still adhered 
 However, the reality was that during the first presentation, I was harshly criticized by Dr. Y and another master's student. Rather than conducting market research, I was merely imagining a market. This failure led me to stay up all night, learning knowledge on vehicles, control, and optimization. After that, I realized that if I wanted to succeed in this project, my learning pipeline would need to change. This experience was more like a generative adversarial model—I constantly deepened my understanding of the electric vehicle chassis controller market and presented more convincing business plans, while the 'discriminators'—from PhD students to judges to investors—continued to raise their expectations.
 
 <figure style="text-align: center;">
-    <img src="\psimages\DawnSEUlib.jpg" alt="On my way back to the dormitory from the Mech Hall at dawn" style="width: 250px; height: 150px;">
+    <img src="\psimages\DawnSEUlib.jpg" alt="On my way back to the dormitory from the Mech Hall at dawn" style="width: 400px; height: 240px;">
     <figcaption>On my way back to the dormitory from the Mech Hall at dawn</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ I began to develop time management skills. While studying my major courses, I gr
 My understanding of automobiles gradually deepened. I learned about distributed drivetrains, domain controllers, hydraulic and electric drive systems, as well as perception, decision-making, and vehicle-to-everything coordination. I began to see these components as modular building blocks, and their engineering principles, which treat the design process with a sense of artistry, deeply impressed me. I also gained insight into the entire automotive ecosystem—OEMs, suppliers, and the broader industry landscape—which solidified my belief in the transformative potential of autonomous driving to revolutionize human life.
 
 <figure style="text-align: center;">
-    <img src="\psimages\Ontest.jpg" alt="Me happily driving on test platform" style="width: 250px; height: 150px;">
+    <img src="\psimages\Ontest.jpg" alt="Me happily driving on test platform" style="width: 400px; height: 240px;">
     <figcaption>Me happily driving on test platform</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ My understanding of automobiles gradually deepened. I learned about distributed 
 Our project ultimately won the national silver award, which was quite a remarkable result. More importantly, this project sparked my interest in autonomous driving, motivating me to explore machine learning and deep learning after the project's completion, in early 2023. Furthermore, after spending a semester abroad in the United States, I officially began working on autonomous driving perception in February of this year.
 
 <figure style="text-align: center;">
-    <img src="\psimages\Winning.jpg" alt="We winning on provincial rounds" style="width: 250px; height: 150px;">
+    <img src="\psimages\Winning.jpg" alt="We winning on provincial rounds" style="width: 400px; height: 240px;">
     <figcaption>We winning on provincial rounds(During COVID we cannot be in person to attend national rounds)</figcaption>
     <figcaption>From left to right: Ms.S, Ms. Y, Dr.Y, Mr. d and me</figcaption>
 </figure>
