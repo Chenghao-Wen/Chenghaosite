@@ -1,5 +1,5 @@
 ---
-title: "2024 FALL got deferred due to VISA delay"
+title: "What happened to my 2024 Fall Enrollment-A sad story"
 date: 2024-12-04T19:33:01-08:00
 author: Chenghao Wen
 slug: first-post
