@@ -31,13 +31,18 @@ The most challenging phase was at the beginning of the project. I still adhered 
 However, the reality was that during the first presentation, I was harshly criticized by Dr. Y and another master's student. Rather than conducting market research, I was merely imagining a market. This failure led me to stay up all night, learning knowledge on vehicles, control, and optimization. After that, I realized that if I wanted to succeed in this project, my learning pipeline would need to change. This experience was more like a generative adversarial model—I constantly deepened my understanding of the electric vehicle chassis controller market and presented more convincing business plans, while the 'discriminators'—from PhD students to judges to investors—continued to raise their expectations.
 
 <figure style="text-align: center;">
-    <img src="\psimages\DawnSEUlib.jpg" alt="On my way back to the dormitory from the Mech Hall at dawn" style="width: 400px; height: 300px;">
-    <figcaption>On my way back to the dormitory from the Mech Hall at dawn</figcaption>
+    <img src="\psimages\Sensorcaliboration.jpg" alt="We working on sensor caliboration" style="width: 400px; height: 300px;">
+    <figcaption>We working on sensor caliboration</figcaption>
 </figure>
 
-### Learned time management and developed a passion for autonomous driving and computer vision.
+### Learned time management and developed a passion for AD and CV
 
 Southeast University and the School of Mechanical Engineering and Science placed great emphasis on our project, as the competition involved not only inter-school rivalry but also inter-departmental competition, with significant implications for resource allocation. The pressure we faced was immense. Although I started off at a disadvantage, I have a personal trait: I don't like to give up. Perhaps my initial efforts were subpar, but I always maintained a positive outlook on the outcome, which made me resilient in the face of setbacks.
+
+<figure style="text-align: center;">
+    <img src="\psimages\.jpg" alt="Me happily driving on test platform" style="width: 400px; height: 300px;">
+    <figcaption>Me happily driving on test platform</figcaption>
+</figure>
 
 I began to develop time management skills. While studying my major courses, I gradually increased the time I dedicated to the project from three hours per day. From April to August in 2022, I slept only five hours most of the days. After dinner, it was time to collaborate with teammates, whether it was conducting market research or performing real-vehicle testing. Often, we worked until 3 or 4 a.m., and then managed to squeeze in a few hours of sleep before catching up with our academic coursework. Fortunately, after years of supervised learning, my under-specification, course-oriented brain was still able to keep pace with my major classes.
 
