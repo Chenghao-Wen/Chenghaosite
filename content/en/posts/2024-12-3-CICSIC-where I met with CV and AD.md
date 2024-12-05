@@ -12,7 +12,6 @@ tags:
   - English
 ---
 
-
 During my second year of university, I dedicated all my spare time to an entrepreneurship competition. The project I worked on was a distributed drive chassis motion controller for electric vehicles, led by Dr. Y from the Department of Vehicle Engineering (who was still a candidate at the time).
 
 The technology used in the product was primarily developed by PhD candidates and was far from my major in Information Engineering. Furthermore, the competition spanned several stages, including the university, provincial, national, and international rounds. It involved extensive market research, field testing of the product, and communication with investors. The time investment was immense, and it placed significant demands on my time management as a second-year student.
