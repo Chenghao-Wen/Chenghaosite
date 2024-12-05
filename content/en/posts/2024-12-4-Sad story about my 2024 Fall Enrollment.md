@@ -24,10 +24,9 @@ After confirming my application to McMaster University, I rejected several other
     <figcaption>My study permit application tracker history</figcaption>
 </figure>
 
-I have applied for a deferral on my offer to 2025 Spring in August. However, **enrollment in 2025 Spring still seems impossible for me at this point(12.5/2024)**. I know this could be a political factor that I could not control, and I am carrying out some research under the supervision of my undergraduate supervisor. However, I still feel frustrated about the deferral of my graduate program.  I contacted two other Meng offer holders from China in the ECE department, and they both faced with same problem and applied for deferral. **One of them got his study permit in Oct, and the other has not yet**.
+I have applied for a deferral on my offer to Winter in August. However, **enrollment in 2024 Winter still seems impossible for me at this point(12.5/2024)**. I know this could be a political factor that I could not control, and I am carrying out some research under the supervision of my undergraduate supervisor. However, I still feel frustrated about the deferral of my graduate program.  I contacted two other Meng offer holders from China in the ECE department, and they both faced with same problem and applied for deferral. **One of them got his study permit in Oct, and the other has not yet**.
 
 Hence, I have decided to resubmit my application for 2025 FALL and seek a RA position for the coming months.
-
 
 
 
