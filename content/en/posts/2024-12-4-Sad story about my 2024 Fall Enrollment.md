@@ -1,5 +1,5 @@
 ---
-title: "What happened to my 2024 Fall Enrollment-A sad story"
+title: "What happened to my 2024 fall enrollment-A sad story"
 date: 2024-12-04T19:33:01-08:00
 author: Chenghao Wen
 slug: first-post
@@ -20,7 +20,7 @@ After confirming my application to McMaster University, I rejected several other
 
 
 <figure style="text-align: center;">
-    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 500px; height: 300px;">
+    <img src="\psimages\StudypermitApp.png" alt="My study permit application tracker" style="width: 500px; height: 3500px;">
     <figcaption>My study permit application tracker history</figcaption>
 </figure>
 
