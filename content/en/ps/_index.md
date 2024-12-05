@@ -10,4 +10,4 @@ date: ''
 - [Exchange Student in UCI and UCSB](/en/2024/12/04/first-post/)
 
 ### Graduate Experience
-- [Sad Story about my 2024 FALL enrollment](/en/2024/12/05/first-post)
+- [Sad story about my 2024 FALL enrollment](/en/2024/12/05/first-post/)

@@ -1,5 +1,5 @@
 ---
-title: "CICSIC-Where I stumble and fall in love with AD and CV(Coming)"
+title: "CICSIC-Where I stumble and fall in love with AD and CV"
 date: 2024-12-03T14:30:37-08:00
 author: Chenghao Wen
 slug: first-post
