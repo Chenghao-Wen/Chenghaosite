@@ -1,18 +1,6 @@
 ---
-# title: "2024 FALL got deferred due to VISA delay"
-# date: 2024-12-05T21:24:26-08:00
-# author: Chenghao Wen
-# slug: first-post
-# draft: false
-# toc: true
-# categories:
-#   - test
-# tags:
-#   - article
-#   - English
-# ---
-title: "CICSIC-Where I stumble and fall in love with AD and CV"
-date: 2024-12-05T14:30:37-08:00
+title: "2024 FALL got deferred due to VISA delay"
+date: 2024-12-05T21:24:26-08:00
 author: Chenghao Wen
 slug: first-post
 draft: false
@@ -23,6 +11,7 @@ tags:
   - article
   - English
 ---
+
 
 In 2023 FALL, when I was still an exchange student at the University of California, Santa Barbara, I submitted my application for 2024 FALL for several **research-based Master's programs in Canada**. Because the tuition for a research-based student in Canada is relatively low, and many of the programs would provide scholarships for students. I was successfully admitted to McMaster University to pursue a MASc(Master of Applied Science) degree with a respectable supervisor.
 
