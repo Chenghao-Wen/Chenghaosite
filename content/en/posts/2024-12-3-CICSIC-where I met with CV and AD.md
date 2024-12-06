@@ -70,4 +70,6 @@ Our project ultimately won the **national silver prize,** which was quite a rema
 
 In addition to Dr. Y, Mr. D, Ms. Y, and Ms. S were also of great help to me. The year I spent with them was the most memorable year of my undergraduate studies, and the experience of collaborating with these four colleagues will remain with me for a lifetime. What stands out the most is the experience of watching the sunrise together after an all-night session at the mechanical building, revising our business plan.
 
+## Reflection on the Experience
+
 Sometimes, I ask myself whether I could have developed a deeper understanding of this field had I started working in a laboratory during my sophomore year. However, the truth is that my interest in autonomous driving gradually formed through this project. Before this, I had been short-sighted and had no understanding of graduate studies, autonomous driving, deep learning, or computer vision. I might have even gone straight into work after earning my bachelor’s degree, so the idea of joining a lab for research during my sophomore year was beyond my consideration.
