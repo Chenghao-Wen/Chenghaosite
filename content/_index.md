@@ -10,9 +10,9 @@ title: Home\
 
 This is Chenghao Wen, a young individual constantly exploring my interests.
 
-[Please check out my CV here.](\files\ChenghaowenCV.pdf) 
+***[Please check out my CV here.](\files\ChenghaowenCV.pdf)*** 
 
-I am looking for research-based master's and PhD program in 2025 fall, [here is a frustrating story about my 2024 fall enrollment](en\2024\12\04\first-post)
+I am looking for a research-based master's and PhD program in 2025 fall, here is a ***[frustrating story](en\2024\12\04\first-post)*** about my 2024 fall enrollment
 
 I was born in Shicheng County, Jiangxi Province, China, a small town filled with the fragrance of lotus flowers. In 2020, I traveled across the country to attend Southeast University in Nanjing as an Honors Class member, where I completed my Bachelor's degree in Information Engineering.
 
