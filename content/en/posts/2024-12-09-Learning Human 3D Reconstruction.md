@@ -1,6 +1,6 @@
 ---
 title: "(Learning) Human 3D reconstruction"
-date: 2024-12-10T00:07:13-08:00
+date: 2024-12-09T00:07:13-08:00
 author: Chenghao Wen
 slug: first-post
 draft: false

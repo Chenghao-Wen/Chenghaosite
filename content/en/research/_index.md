@@ -9,4 +9,4 @@ date: ''
 - [Fine-tune SAM(Coming)](/en/2024/12/01/first-post/)
 
 ### Pre-research on Reconstruction
--[Human Body 3D Reconstruction][/en/2024/12/10/first-post/]
+-[Human Body 3D Reconstruction][/en/2024/12/09/first-post/]
