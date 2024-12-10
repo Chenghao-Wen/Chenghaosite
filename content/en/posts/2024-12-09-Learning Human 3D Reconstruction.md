@@ -44,7 +44,7 @@ The displacement of vertices due to the rigid body rotation of the skeleton caus
 The following figure illustrates the impact of these three offsets on the reconstruction results:
 
 <figure style="text-align: center;">
-    <img src="\researchimages\Breakdownthemodel.png" alt="Pic demonstrate offset" style="width: 400px; height: 240px;">
+    <img src="\researchimages\Breakdownthemodel.png" alt="Pic demonstrate offset" style="width: 600px; height: 240px;">
     <figcaption>Pic Demonstrate Offset</figcaption>
-    <figcaption style="font-size: 5px;">Pictrue from SMPL: A skinned multi-person linear model. In Seminal Graphics Papers: Pushing the Boundaries, Volume 2 (pp. 851-866).</figcaption>
+    <figcaption style="font-size: 10px;">Pictrue from SMPL: A skinned multi-person linear model. In Seminal Graphics Papers: Pushing the Boundaries, Volume 2 (pp. 851-866).</figcaption>
 </figure>
