@@ -32,14 +32,19 @@ However, this intuitive and end-to-end solution has a problem: for each individu
 ## SMPL
 Therefore, researchers introduced prior knowledge to decompose this end-to-end inference process into multiple networks, allowing some of the model's networks to have generalizability:
 
-For example, all models result in 6,890 vertices, and if all the models are standing in a T-pose, the distribution of these vertices will be very similar.
-If all models perform the same action, the soft tissue deformation will be similar, and the trajectory of vertex displacement will also be similar.
-When performing the same action, the changes in the skeletal positions are similar, leading to comparable rotation and offset effects on the vertices.
+Similar Point 1 :For example, all models result in 6,890 vertices, and if all the models are standing in a T-pose, the distribution of these vertices will be very similar.
+
+Similar Point 2 :If all models perform the same action, the soft tissue deformation will be similar, and the trajectory of vertex displacement will also be similar.
+
+Similar Point 3 :When performing the same action, the changes in the skeletal positions are similar, leading to comparable rotation and offset effects on the vertices.
+
 After decomposition, the output of the 3D reconstruction can be considered as multiple offsets applied to a base T-pose mesh model. These offsets include:
 
-The displacement of vertices due to the model's body shape.
-The displacement of vertices caused by soft tissue deformation from the model’s actions.
-The displacement of vertices due to the rigid body rotation of the skeleton caused by the model’s actions.
+The offset of vertices due to the model's body shape.
+
+The offset of vertices caused by soft tissue deformation from the model’s actions.
+
+The offset of vertices due to the rigid body rotation of the skeleton caused by the model’s actions.
 
 The following figure illustrates the impact of these three offsets on the reconstruction results:
 
