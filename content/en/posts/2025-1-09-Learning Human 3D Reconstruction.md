@@ -235,3 +235,9 @@ $$
 
 
 Subsequently, perform principal component analysis on the rest - pose vertex positions of all samples in the Multi - Shape dataset, take the mean value as the final result $T$, and calculate the eigenvector $S$.
+
+
+
+### Reference
+
+Loper, M., Mahmood, N., Romero, J., Pons-Moll, G., & Black, M. J. (2015). SMPL: A Skinned Multi-Person Linear Model. *ACM Transactions on Graphics*, *34*(6).
