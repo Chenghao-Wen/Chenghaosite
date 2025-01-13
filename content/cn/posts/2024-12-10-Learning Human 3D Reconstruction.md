@@ -10,23 +10,30 @@ categories:
 tags:
   - article
   - English
+
 ---
 
+```
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+```
 
-The Task:
-## 理解任务
-与感知任务相比，三维重建任务在输入和输出上相反。三维重建任务多是在已经对场景（或人）有了语义上的理解后，把语义的理解作为输入，预测传感器收集到的数据是如何的。如果说感知模型训练得到的是一个游客，那么重建模型训练的结果就是一个画家。
+## 三维人体重建任务
+与感知任务相比，三维重建任务在输入和输出上相反。三维重建任务多是在已经对场景（或人）有了语义上的理解后，预测视觉传感器会收集到的数据。
 
-以三维人体重建任务为例，它要解决的问题就是根据已知的动作预测人体软组织的位置、形状变化。三维人体重建首先把重建的结果拆分为一个可以量化的数学模型，这个数学模型由人体的关节和软组织组成。在人体运动的过程中，骨骼的位置、朝向变化是好描述的。因为他们可以被诗作刚体，但是软组织的变化往往很难描述，而且人体的软组织对于视觉感知有决定性的作用。
+以三维人体重建任务根据已知的动作预测人体软组织的形状。首先把重建的结果拆分为一个可以量化的数学模型，这个数学模型由人体的关节和软组织组成。其中关节的运动由骨骼牵引，可以被视作刚体的运动。但是软组织会随着人体位姿的变化而改变形状，这是一个复杂的预测过程。
 
 ## 蒙皮重建方法
-在建模人体软组织的流派中，我正在pre-research的是蒙皮，他们把软组织建模成许多块顶点，并且每个软组织对于关节有着依附的关系。因此，三维人体的重建任务被转化成了预测多个软组织的顶点，而三维重建模型，就成为了输入一个人的运动姿态、依据已有的人体软组织参数、人体骨骼参数，预测运动姿态下软组织分布的推理模型。
+我正在pre-research的是蒙皮重建方法，它把软组织建模成许多个顶点，并且对于关节有着依附的关系。因此，三维人体的重建任务被转化成了预测多个顶点的三维位置。而三维重建模型，就成为了输入一个人的运动姿态以及人类的体型，依据通过训练得到的权重，预测运动姿态下软组织分布的推理模型。
 
-从量化的角度来看，以工作SMPL为例，人体被划分为6890个顶点以及23个关节点。模型的输出是6890个顶点的坐标，表示为尺寸是6890*3的一个张量。
+以工作SMPL为例，人体被划分为6890个顶点以及23个关节点。模型的输出是6890个顶点的三维坐标，表示为尺寸是6890*3的一个张量。
 
-如果采用端到端的模型训练方法，由同一个人穿戴具有6890个顶点传感器的传感设备，做出各种动作得到sample。那么模型的输入就是23个关节的几何信息、模特在rest pose下的所有表面顶点的位置，然后构建一个输入是（6890+23）*3的全连接神经网络，经过100个epoch的训练，得到一个比较准确的模型。
+#### Linear Blend Skinning
 
-但是这种直观端到端的解法存在问题，就是对于每一个模特，训练得到的模型都是不一样的，不存在泛用性。
+$$
+\vec{v}*c = \sum*{i = 1}^{n} w_i M_{i,c} M_{i,d}^{-1} \vec{v}_d
+$$
+
+$V_d$是休息姿态下的顶点坐标，是一个6890×3的矩阵,$M_{i,d}^{-1} $是在静态下，将顶点坐标转换到关节i的转换矩阵，$M_{i,c}$是在pose的影响下，关节点相对于rest-pose时的转换矩阵，$w_{i}$是各个关节点对于顶点移动的权重
 
 ## SMPL
 因此，研究人员通过引入先验的经验，把这种end-to-end的推理过程进行拆分，成为多个网络，让模型的一些网络具有通用性：
@@ -41,111 +48,106 @@ The Task:
 
 下面这张图展示了加入三个偏移对于重建结果的影响：
 ![alt text](image-12.png)
-<!-- <figure style="text-align: center;">
-    <img src="static\researchimages\Breakdownthemodel.png" alt="Pic demonstrate offset" style="width: 400px; height: 240px;">
-    <figcaption>Pic Demonstrate Offset</figcaption>
-    <figcaption style="font-size: 5px;">Pictrue from SMPL Paper</figcaption>
-</figure> -->
 
 ## 模型
-### 模型的输入参数：
+#### 模型的输入参数：
 
-β，模特的体态参数，（用β大概是因为Body的首字母为B？）
+$\beta$，模特的体态参数。在multi-shape的数据集上，对于各个shape的样本的扫描数据应用PCA后，得到十个主成分特征向量。并由此，将新的模特数据投影到特征向量上
 
-θ是关节坐标系之间的旋转角差值，由θ=23*3+3个数组成，23*3代表每一个节点坐标系相对父节点坐标系偏移，3代表根节点与世界坐标系的旋转偏移。每一个节点下链接一个骨骼（原文用了part）。因此θ可以理解为骨骼的旋转角度。
+$\theta$是关节坐标系之间的旋转角差值，由72个数组成，69是每一个关节点坐标系相对父关节点坐标系偏移，另外3个数字是根节点坐标系与世界坐标系的偏移。每一个节点下链接一个部位。因此θ可以理解为骨骼的旋转角度。
 
-### 中间变量：
+#### 中间变量：
 
-B（β）B（θ）中B代表Blend shape，B（β）是由体态参数造成的顶点偏移。B（θ）代表由位姿带来的顶点偏移，
+$B_S(\vec{\beta})$是由体态参数造成的顶点偏移,也是Principal Component Scores
 
-R（θ）代表每一个节点相对于父节点的旋转矩阵，尺寸是3*3*k，扁平化后是9*k
+$B_P(\vec{\theta})$代表由位姿带来的顶点偏移，
 
-R（θ*）代表的是rest pose时，每一个节点相对于父节点的旋转矩阵，尺寸一样
+$R_{n}(\vec{\theta})$代表每一个节点相对于父节点的旋转矩阵，尺寸是3×3×k，扁平化后是9×k
 
-Tp代表经过blend shape parameter和pose修正后的，“修正rest pose”上顶点的位置。
+$R_{n}(\vec{\theta}^{*})$代表的是rest pose时，每一个节点相对于父节点的旋转矩阵，尺寸一样
 
-### 模型的权重：
+$T_P$代表经过blend shape parameter和pose修正后的，“修正rest pose”上顶点的位置，也是PCA处理后的重构数据。
 
-Sn代表blend shape parameter对于blend shape的偏移，尺寸是3N*|β|
+#### 模型的权重：
 
-Pn 用于位姿对于blend shape的偏移，尺寸是3N*|R|=3N*9k
+$S_n$是由multi_shape数据集上经过PCA得到的特征向量
 
-J用于编码由blend shape带来的骨骼位置的偏移。
+$P_n$ 用于加权位姿对于blend shape的偏移，矩阵尺寸是3N×|R|=3N×9×k
 
-W 蒙皮权重
+$J$用于由顶点位置回归到关节点位置。
 
-T rest pose下的顶点分布
+$W$ 蒙皮权重
+
+$T$ 是rest pose下的顶点分布，同时也是PCA中的均值
+
+#### 推理流程：
+
+step1：重构SMPL的rest pose
+
+首先计算Principal Component Scores，结果可以视作体型对于rest pose上顶点的偏移。
+$$
+B_{S}(\vec{\beta}) = \sum_{n = 1}^{|\beta| = 300} \beta_{n} S_{n}, \text{ where } S_{n} \in R^{3N\times300}
+$$
+经过体型修正的rest pose下的顶点是
+$$
+T_{S} = T + B_{S}(\vec{\beta}), \text{ where } T \in R^{3N}
+$$
 
 
-### 模型pipeline：
-
-step1：修正 rest pose
-
-![alt text](image.png)
-
-step2：修正节点位置
-
-![alt text](image-1.png)
-
-step3：蒙皮
-
-![alt text](image-2.png)
-
-其中，i代表第i个顶点的序号，ti代表T的第i个元素，wi等以此类推
-
-B（β）也就是blend shape偏移的第一部分：
-
-![alt text](image-3.png)
-
-B（Θ）就是blend shape偏移的第二部分：
-
-![alt text](image-4.png)
+同时，根据修正后的rest pose，可以推理出关节点的位置
+$$
+J(\vec{\beta}; \mathcal{J}, \overline{\mathbf{T}}, \mathcal{S}) = \mathcal{J}(\overline{\mathbf{T}} + B_S(\vec{\beta}; \mathcal{S}))
+$$
+step2：计算全新的pose下，会对顶点带来的影响。但是，这是在rest pose上做的顶点偏移。
+$$
+\overline{\mathbf{t}}_i + \sum_{m = 1}^{|\vec{\beta}|} \beta_m \mathbf{s}_{m,i} + \sum_{n = 1}^{9K} (R_n(\vec{\theta}) - R_n(\vec{\theta}^*)) \mathbf{p}_{n,i}
+$$
+step3：按权重蒙皮
+$$
+\mathbf{t}'_i = \sum_{k = 1}^{K} w_{k,i} G'_k(\vec{\theta}, J(\vec{\beta}; \mathcal{J}, \overline{\mathbf{T}}, \mathcal{S})) \mathbf{t}_{P,i}(\vec{\beta}, \vec{\theta}; \overline{\mathbf{T}}, \mathcal{S}, \mathcal{P})
+$$
 
 ## 训练策略
-JWP使用Multi-Pose dataset训练，因为他们时per-pose change的
-T S使用multi-shape dataset训练，因为他们时per-shape change的
+JWP使用Multi-Pose dataset训练。
+T S在Multi-shape dataset上进行PCA处理得到。
 
-### JWP的loss
-此时T S没有被学习，因此需要把rest pose下的顶点位置直接测量，记作T^p,他包括了T与B(S)的部分.
-另外还接受测量的是每一个pose的节点位置,记做J^P
-第一个loss是end-to-end loss,也就是实际顶点与预测顶点的欧氏距离的平方
+#### JWP的训练
+此时T S没有被学习，因此对于dataset中的每一个样本，直接测量rest pose下的顶点位置，记为$\hat{\mathbf{T}}_{i}^{P}$
+另外还测量的是每一个样本的关节点，记做$\hat{\mathbf{J}}_{i}^{P}$
 
-![alt text](image-5.png)
+第一个loss是end-to-end loss,也就是,经过smpl重建后的顶点位置与实际顶点位置的欧氏距离的平方之和
+$$
+\sum_{j = 1}^{P_{\text{reg}}} \left\lVert \mathbf{V}_j^P - W(\hat{\mathbf{T}}_{s(j)}^P + B_P(\vec{\theta}_j; \mathcal{P}), \hat{\mathbf{J}}_{s(j)}^P, \vec{\theta}_j, \mathcal{W}) \right\rVert^2
+$$
+第二个loss是样本平衡的loss,如果顶点和关节点的左右对称性较好,那么loss会更低.
+$$
+E_Y(\hat{\mathbf{J}}^P, \hat{\mathbf{T}}^P) = \sum_{i = 1}^{P_{\text{subj}}} \lambda_U \left\lVert \hat{\mathbf{J}}_i^P - U(\hat{\mathbf{J}}_i^P) \right\rVert^2 + \left\lVert \hat{\mathbf{T}}_i^P - U(\hat{\mathbf{T}}_i^P) \right\rVert^2
+$$
+第三个loss是针对J权重
+$$
+E_J(\hat{\mathbf{T}}^P, \hat{\mathbf{J}}^P) = \sum_{i = 1}^{P_{\text{subj}}} \left\lVert \mathcal{J}_I \hat{\mathbf{T}}_i^P - \hat{\mathbf{J}}_i^P \right\rVert^2
+$$
+最后两个loss是正则化的loss
+$$
+E_P(\mathcal{P}) = \|\mathcal{P}\|_F^2
+$$
 
-第二个loss是针对不同样本做平衡的loss,如果顶点和关节点的左右对称性较好,那么loss会更低.
+$$
+E_W(\mathcal{W}) = \|\mathcal{W} - \mathcal{W}_I\|_F^2
+$$
 
-![alt text](image-6.png)
+### 使用PCA获得S和T
 
-第三个loss是针对J权重，要求J对于骨骼位置的修正效果够好
-
-![alt text](image-7.png)
-
-最后两个loss是正则化的loss，要求 P权重逼近于0，以及蒙皮权重相对于初始权重正则化0。
-
-![alt text](image-8.png)
-
-![alt text](image-9.png)
-
-### S和T的训练
-
-在训练S和T之前，一个问题是如何得到一个输入θ，直观的想法是直接测量当前样本的θ。但是为了保证训练得到的T在不同的pose之间有鲁棒性，作者将multi-pose 数据集的结果归一化到rest pose计算了平均的顶点位置 T_μ与平均的节点位置J_μ。
-针对multi-shape数据集中的每一个样本，作者带入了T_μ与J_μ，并且取了能够使得顶点偏移最小化的θ为输入.
-
-![alt text](image-10.png)
-
+作者将multi-pose 数据集的结果归一化到rest pose计算了平均的顶点位置 $\hat{\mathbf{T}}_{\mu}^{P}$与平均的节点位置$\hat{\mathbf{J}}_{\mu}^{P}$。
+针对multi-shape数据集中的每一个样本，作者带入了$\hat{\mathbf{T}}_{\mu}^{P}$与$\hat{\mathbf{J}}_{\mu}^{P}$，并且取了能够使得顶点偏移最小化的θ为输入.
+$$
+\arg\min_{\vec{\theta}} \sum_{e} \left\|W_e(\hat{\mathbf{T}}_{\mu}^{P}+B_{P}(\vec{\theta};\mathcal{P}),\hat{\mathbf{J}}_{\mu}^{P},\vec{\theta},\mathcal{W})-\mathbf{V}_{j,e}^{S}\right\|^2
+$$
 在确认输入θ后，便可以计算最优的rest-pose顶点位置。
+$$
+\hat{\mathbf{T}}_{j}^{S} = \arg\min_{\hat{\mathbf{T}}} \left\|W(\hat{\mathbf{T}} + B_{P}(\vec{\theta}_{j};\mathcal{P}),\mathcal{J}\hat{\mathbf{T}},\vec{\theta}_{j},\mathcal{W}) - \mathbf{V}_{j}^{S}\right\|^2
+$$
+接着，对所有在Multi-shape dataset中样本的rest-pose顶点位置做主成分分析，将均值作为最后的结果T，并且计算特征向量S
 
-![alt text](image-11.png)
 
-接着对所有的rest-pose顶点位置做主成分分析，可以计算出最佳 rest-pose的归一化顶点位置，以及参数S
-
-## 疑惑
-1 LBS方法的问题是关节旋转时会变形，可是为什么会这样呢？
-2 frobenius函数是什么。
-3 为什么J要设置为non-negtive
-4 PCA在shape parameter train中的如何得到S以及T是什么？
-
-## todo
-1 看代码，消除自己的理解里面模糊的部分，比如说各个节点坐标系是怎么定义的，权重实际意义，对我来说还很模糊。
-2 补足相关知识： PCA(机器学习课讲过，但是忘了实现的具体步骤)，frobenius
 
