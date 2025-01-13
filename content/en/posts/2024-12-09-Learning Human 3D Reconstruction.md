@@ -40,7 +40,7 @@ $$
 \vec{v}*c = \sum*{i = 1}^{n} w_i M_{i,c} M_{i,d}^{-1} \vec{v}_d
 $$
 
-$V_d$is the vertex coordinates in the resting pose, which is a 6890×3 matrix.,
+$V_d$ is the vertex coordinates in the resting pose, which is a 6890×3 matrix.,
 
 $M_{i,d}^{-1} $is the transformation matrix that converts vertex coordinates to joint in the static state _
 
@@ -155,7 +155,11 @@ The first loss is the end - to - end loss, that is, the sum of the squares of th
 $$
 \sum_{j = 1}^{P_{\text{reg}}} \left\lVert \mathbf{V}_j^P - W(\hat{\mathbf{T}}_{s(j)}^P + B_P(\vec{\theta}_j; \mathcal{P}), \hat{\mathbf{J}}_{s(j)}^P, \vec{\theta}_j, \mathcal{W}) \right\rVert^2
 $$
+
+
 The second loss is the sample - balance loss. If the left - right symmetry of vertices and joint points is good, the loss will be lower.
+
+
 $$
 E_Y(\hat{\mathbf{J}}^P, \hat{\mathbf{T}}^P) = \sum_{i = 1}^{P_{\text{subj}}} \lambda_U \left\lVert \hat{\mathbf{J}}_i^P - U(\hat{\mathbf{J}}_i^P) \right\rVert^2 + \left\lVert \hat{\mathbf{T}}_i^P - U(\hat{\mathbf{T}}_i^P) \right\rVert^2
 $$
