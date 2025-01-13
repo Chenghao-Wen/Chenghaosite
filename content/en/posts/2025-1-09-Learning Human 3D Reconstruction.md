@@ -1,6 +1,6 @@
 ---
 title: "(Learning) Human 3D reconstruction"
-date: 2024-12-09T00:07:13-08:00
+date: 2025-01-09T00:07:13-08:00
 author: Chenghao Wen
 slug: first-post
 draft: false
@@ -12,7 +12,7 @@ tags:
   - English
 ---
 
- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 
 
@@ -23,6 +23,8 @@ Compared with perception tasks, 3D reconstruction tasks are opposite in terms of
 
 
 Take the 3D human body reconstruction task as an example, which predicts the shape of human soft tissues based on known actions. First, the reconstruction result is decomposed into a quantifiable mathematical model. This mathematical model consists of human joints and soft tissues. The movement of joints is driven by bones and can be regarded as the movement of a rigid body. However, the shape of soft tissues changes with the change of human body postures, which is a complex prediction process.
+
+
 
 ### Skinning Reconstruction Method
 
@@ -36,15 +38,18 @@ Take the work of SMPL as an example. The human body is divided into 6890 vertice
 
 #### Linear Blend Skinning
 
+
 $$
 \vec{v}*c = \sum*{i = 1}^{n} w_i M_{i,c} M_{i,d}^{-1} \vec{v}_d
 $$
+
+
 
 $V_d$ is the vertex coordinates in the resting pose, which is a 6890×3 matrix.,
 
 $M_{i,d}^{-1} $is the transformation matrix that converts vertex coordinates to joint in the static state _
 
-_$M_{i,c}$is the transformation matrix of the joint point relative to the rest - pose under the influence of the pose.
+$M_{i,c}$is the transformation matrix of the joint point relative to the rest - pose under the influence of the pose.
 
 $w_{i}$is the weight of each joint point for vertex movement.
 
@@ -119,25 +124,41 @@ $T$  is the vertex distribution in the rest pose and is also the mean value in P
 ##### **Step 1: Reconstruct the rest pose of SMPL**
 
 First, calculate the Principal Component Scores. The result can be regarded as the offset of the body shape to the vertices in the rest pose.
+
+
 $$
 B_{S}(\vec{\beta}) = \sum_{n = 1}^{|\beta| = 300} \beta_{n} S_{n}, \text{ where } S_{n} \in R^{3N\times300}
 $$
+
+
 The vertices in the rest pose after body - shape correction are
+
+
 $$
 T_{S} = T + B_{S}(\vec{\beta}), \text{ where } T \in R^{3N}
 $$
+
+
 At the same time, according to the corrected rest pose, the positions of joint points can be inferred.
+
+
 $$
 J(\vec{\beta}; \mathcal{J}, \overline{\mathbf{T}}, \mathcal{S}) = \mathcal{J}(\overline{\mathbf{T}} + B_S(\vec{\beta}; \mathcal{S}))
 $$
 
+
+
 ##### **Step 2: Calculate the impact on vertices under a new pose. However, this is the vertex offset made on the rest pose.**
+
 
 $$
 \overline{\mathbf{t}}_i + \sum_{m = 1}^{|\vec{\beta}|} \beta_m \mathbf{s}_{m,i} + \sum_{n = 1}^{9K} (R_n(\vec{\theta}) - R_n(\vec{\theta}^*)) \mathbf{p}_{n,i}
 $$
 
+
+
 ##### **Step 3: Skinning according to weights**
+
 
 $$
 \mathbf{t}'_i = \sum_{k = 1}^{K} w_{k,i} G'_k(\vec{\theta}, J(\vec{\beta}; \mathcal{J}, \overline{\mathbf{T}}, \mathcal{S})) \mathbf{t}_{P,i}(\vec{\beta}, \vec{\theta}; \overline{\mathbf{T}}, \mathcal{S}, \mathcal{P})
@@ -147,9 +168,13 @@ $$
 
 JWP is trained using the Multi - Pose dataset. T and S are obtained by performing PCA on the Multi - Shape dataset.
 
+
+
 #### Training of J, W, P
 
 At this point, T and S are not learned. Therefore, for each sample in the dataset, the vertex position in the rest pose is directly measured and recorded as $\hat{\mathbf{T}}_{i}^{P}$. In addition, the joint points of each sample are also measured and recorded as $\hat{\mathbf{J}}_{i}^{P}$
+
+
 
 The first loss is the end - to - end loss, that is, the sum of the squares of the Euclidean distances between the vertex positions after SMPL reconstruction and the actual vertex positions.
 $$
@@ -157,17 +182,27 @@ $$
 $$
 
 
+
 The second loss is the sample - balance loss. If the left - right symmetry of vertices and joint points is good, the loss will be lower.
+
 
 
 $$
 E_Y(\hat{\mathbf{J}}^P, \hat{\mathbf{T}}^P) = \sum_{i = 1}^{P_{\text{subj}}} \lambda_U \left\lVert \hat{\mathbf{J}}_i^P - U(\hat{\mathbf{J}}_i^P) \right\rVert^2 + \left\lVert \hat{\mathbf{T}}_i^P - U(\hat{\mathbf{T}}_i^P) \right\rVert^2
 $$
+
+
 The third loss is for the J weight.
+
+
 $$
 E_J(\hat{\mathbf{T}}^P, \hat{\mathbf{J}}^P) = \sum_{i = 1}^{P_{\text{subj}}} \left\lVert \mathcal{J}_I \hat{\mathbf{T}}_i^P - \hat{\mathbf{J}}_i^P \right\rVert^2
 $$
+
+
 The last two losses are regularization losses.
+
+
 $$
 E_P(\mathcal{P}) = \|\mathcal{P}\|_F^2
 $$
@@ -185,11 +220,18 @@ The author normalized the results of the Multi - pose dataset to the rest pose a
 For each sample in the multi - shape dataset, the author input $\hat{\mathbf{T}}_{\mu}^{P}$ and $\hat{\mathbf{J}}_{\mu}^{P}$, and took $\theta$ that minimizes the vertex offset as the input.
 
 
+
 $$
 \arg\min_{\vec{\theta}} \sum_{e} \left\|W_e(\hat{\mathbf{T}}_{\mu}^{P}+B_{P}(\vec{\theta};\mathcal{P}),\hat{\mathbf{J}}_{\mu}^{P},\vec{\theta},\mathcal{W})-\mathbf{V}_{j,e}^{S}\right\|^2
 $$
+
+
 After confirming the input $\theta$, the optimal vertex position in the rest - pose can be calculated.
+
+
 $$
 \hat{\mathbf{T}}_{j}^{S} = \arg\min_{\hat{\mathbf{T}}} \left\|W(\hat{\mathbf{T}} + B_{P}(\vec{\theta}_{j};\mathcal{P}),\mathcal{J}\hat{\mathbf{T}},\vec{\theta}_{j},\mathcal{W}) - \mathbf{V}_{j}^{S}\right\|^2
 $$
+
+
 Subsequently, perform principal component analysis on the rest - pose vertex positions of all samples in the Multi - Shape dataset, take the mean value as the final result $T$, and calculate the eigenvector $S$.
