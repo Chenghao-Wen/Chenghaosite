@@ -1,13 +1,29 @@
-<code class="language-plain has-numbering hljs" id="code_id_2"><!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <title>数学公式示例</title>
-      <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-      </script>
-    </head>
-    <body>
-      <p>这是一个基本的数学公式：\(E = mc^2\)</p>
-    </body>
-    </html></code>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数学公式示例</title>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div id="nav">
+		Inline 行内的公式 $E=mc^2$ 行内的公式，行内的$E=mc^2$公式。
+
+ 
+		$$c = \pm\sqrt{a^2 + b^2}$$
+
+ 
+		$$(\sqrt{3x-1}+(1+x)^2)$$
+
+ 
+		$$x_{1,2}=\frac{-b\pm\sqrt{\color{Red}b^2-4ac}}{2a}$$
+
+ 
+		$${\color{Blue}x^2}+{\color{YellowOrange}2x}-{\color{OliveGreen}1}$$
+        
+	</div>
+</body>
+</html>
