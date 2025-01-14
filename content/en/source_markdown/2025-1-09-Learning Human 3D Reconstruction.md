@@ -40,7 +40,7 @@ Take the work of SMPL as an example. The human body is divided into 6890 vertice
 
 
 $$
-\vec{v}*c = \sum*{i = 1}^{n} w_i M_{i,c} M_{i,d}^{-1} \vec{v}_d
+\overline{\mathbf{v}}_{c}=\sum_{i = 1}^{n} w_{i} M_{i,c} M_{i,d}^{-1} \mathbf{v}_{d}
 $$
 
 
